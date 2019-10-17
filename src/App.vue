@@ -1,31 +1,42 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-app-bar
+      app
+      inverted-scroll>
+      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      <v-spacer></v-spacer>
+      <v-img
+        class="mx-2"
+        :src="require('./assets/logo.png')"
+        max-height="50"
+        max-width="50"
+        contain
+      ></v-img>
+      <v-toolbar-title class="headline text-uppercase">
+      <div class="company-name">Z-Collective</div>
+      </v-toolbar-title>
+    </v-app-bar>
+
+    <v-content>
+      <router-view/>
+    </v-content>
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+
+export default {
+  name: 'App',
+  data: () => ({
+    //
+  })
 }
-#nav {
-  padding: 30px;
+</script>
+<style scoped>
+@import url('https://fonts.googleapis.com/css?family=Arvo&display=swap');
+.company-name {
+  font-family: 'Arvo', serif;
+  color: #5d6250
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
