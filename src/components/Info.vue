@@ -19,7 +19,7 @@
                 <v-flex xs12 md4>
                   <v-card flat class="transparent">
                     <v-card-text class="text-center">
-                      <v-icon x-large class="accent--text">mdi-account-group</v-icon>
+                      <v-icon size="60" class="accent--text">{{groupIcon}}</v-icon>
                     </v-card-text>
                     <v-card-title primary-title class="layout justify-center">
                       <div class="headline text-center">Who we are</div>
@@ -34,7 +34,7 @@
                 <v-flex xs12 md4>
                   <v-card flat class="transparent">
                     <v-card-text class="text-center">
-                      <v-icon x-large class="accent--text">mdi-devices</v-icon>
+                      <v-icon size="60" class="accent--text">{{deviceIcon}}</v-icon>
                     </v-card-text>
                     <v-card-title primary-title class="layout justify-center">
                       <div class="headline">What we can do</div>
@@ -49,7 +49,7 @@
                 <v-flex xs12 md4>
                   <v-card flat class="transparent">
                     <v-card-text class="text-center">
-                      <v-icon x-large class="accent--text">mdi-projector-screen</v-icon>
+                      <v-icon size="60" class="accent--text">{{ screenIcon }}</v-icon>
                     </v-card-text>
                     <v-card-title primary-title class="layout justify-center">
                       <div class="headline text-center">Existing Projects</div>
@@ -66,7 +66,14 @@
         </v-layout>
 </template>
 <script>
+import { mdiDevices, mdiAccountGroup, mdiProjectorScreen } from '@mdi/js'
 export default {
-
+  data: () => {
+    return {
+      deviceIcon: mdiDevices,
+      groupIcon: mdiAccountGroup,
+      screenIcon: mdiProjectorScreen
+    }
+  }
 }
 </script>

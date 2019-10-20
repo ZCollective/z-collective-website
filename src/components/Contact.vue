@@ -12,7 +12,7 @@
                 <v-list class="transparent">
                   <v-list-item>
                     <v-list-item-action>
-                      <v-icon class="accent--text">mdi-map-marker</v-icon>
+                      <v-icon class="accent--text">{{markerIcon}}</v-icon>
                     </v-list-item-action>
                     <v-list-item-content>
                       <v-list-item-title>Leonberg, Germany</v-list-item-title>
@@ -20,10 +20,18 @@
                   </v-list-item>
                   <v-list-item>
                     <v-list-item-action>
-                      <v-icon class="accent--text">mdi-email</v-icon>
+                      <v-icon class="accent--text">{{emailIcon}}</v-icon>
                     </v-list-item-action>
                     <v-list-item-content>
                       <v-list-item-title>contact@zcollective.de</v-list-item-title>
+                    </v-list-item-content>
+                  </v-list-item>
+                  <v-list-item>
+                    <v-list-item-action>
+                      <v-icon class="accent--text">{{phoneIcon}}</v-icon>
+                    </v-list-item-action>
+                    <v-list-item-content>
+                      <v-list-item-title>Available Soon</v-list-item-title>
                     </v-list-item-content>
                   </v-list-item>
                 </v-list>
@@ -33,7 +41,15 @@
         </v-container>
 </template>
 <script>
+import { mdiMapMarker, mdiEmail, mdiPhone, mdiFax } from '@mdi/js'
 export default {
-
+  data: () => {
+    return {
+      emailIcon: mdiEmail,
+      markerIcon: mdiMapMarker,
+      phoneIcon: mdiPhone,
+      faxIcon: mdiFax
+    }
+  }
 }
 </script>
