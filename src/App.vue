@@ -3,7 +3,7 @@
     <v-app-bar
       app
       inverted-scroll>
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      <!-- <v-app-bar-nav-icon></v-app-bar-nav-icon>-->
       <v-spacer></v-spacer>
       <v-img
         class="mx-2"
