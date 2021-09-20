@@ -3,7 +3,7 @@
     <section>
       <Hero/>
     </section>
-    <section>
+    <section class="my-8">
       <Info/>
     </section>
     <section>

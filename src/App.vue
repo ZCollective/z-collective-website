@@ -16,10 +16,9 @@
       <div class="company-name">Z-Collective</div>
       </v-toolbar-title>
     </v-app-bar>
-
-    <v-content>
+    <v-main>
       <router-view/>
-    </v-content>
+    </v-main>
   </v-app>
 </template>
 
@@ -31,6 +30,7 @@ export default {
     //
   })
 }
+
 </script>
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Arvo&display=swap');
