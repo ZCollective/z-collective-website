@@ -7,13 +7,14 @@
               :icon="entry.icon"
               color="primary lighten-2"
             >
-              <v-card max-width="700" class="mr-16">
+              <v-card max-width="600" class="mr-16">
                 <v-card-title>{{ entry.title }}</v-card-title>
                 <v-card-text v-html="entry.description"> </v-card-text>
                 <v-card-actions>
                   <v-spacer></v-spacer>
                   <div v-for="link in entry.links" :key="link.url">
                     <v-btn
+                      small
                       color="secondary lighten-1"
                       class="mx-2"
                       :href="link.url"
@@ -68,7 +69,7 @@ export default {
             },
             {
               url: 'https://github.com/ZCollective/Inever-Android',
-              name: 'Android App',
+              name: 'App',
               icon: 'mdi-github'
             }
           ]
