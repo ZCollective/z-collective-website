@@ -39,7 +39,7 @@
           <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn  color="secondary" v-if="expand===null" @click="expand=0">More</v-btn>
-            <v-btn v-else @click="expand=null">Less</v-btn>
+            <v-btn color="secondary" v-else @click="expand=null">Less</v-btn>
             <v-spacer></v-spacer>
           </v-card-actions>
         </v-card>
@@ -49,6 +49,9 @@
           <v-expansion-panel :key="0">
             <v-expansion-panel-content>
               <Projects/>
+              <v-row justify="center" class="mb-2">
+                <v-btn color="secondary" @click="expand=null">Less</v-btn>
+              </v-row>
             </v-expansion-panel-content>
           </v-expansion-panel>
         </v-expansion-panels>
