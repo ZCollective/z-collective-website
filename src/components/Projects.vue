@@ -127,7 +127,7 @@ export default {
               icon: 'mdi-github'
             },
             {
-              url: 'https://zcollective.de/',
+              url: 'https://account-analyzer.zcollective.de/',
               name: 'Demo',
               icon: 'mdi-eye'
             }
